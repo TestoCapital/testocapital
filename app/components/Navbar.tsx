@@ -18,8 +18,8 @@ export default function Navbar() {
         
         <div>
           <h1 className="text-white text-2xl font-bold">
-            TestoCapital
-          </h1>
+          TestoCapital PRO
+         </h1>
         </div>
 
         <button
