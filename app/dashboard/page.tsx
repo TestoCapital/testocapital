@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import PortfolioChart from "../components/PortfolioChart";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -111,6 +112,9 @@ return (
               €12.450
             </h2>
           </div>
+          <div className="mt-8">
+  <PortfolioChart />
+</div>
 
         </div>
 
