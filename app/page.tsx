@@ -1,310 +1,198 @@
 import PublicNavbar from "./components/PublicNavbar";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="relative bg-black min-h-screen overflow-hidden">
-      <div className="absolute top-[-300px] left-[-300px] w-[700px] h-[700px] bg-blue-600/20 rounded-full blur-3xl" />
-
-<div className="absolute bottom-[-300px] right-[-300px] w-[700px] h-[700px] bg-purple-600/20 rounded-full blur-3xl" />
+    <div className="bg-black text-white overflow-hidden">
 
       <PublicNavbar />
 
-      <main className="pt-40">
+      <main>
 
-        <section className="max-w-7xl mx-auto px-6">
+        {/* HERO */}
 
-          <div className="max-w-4xl">
+        <section className="relative min-h-screen flex items-center">
 
-            <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-zinc-300 mb-8">
-              Plataforma moderna de inversión
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.25),transparent_40%)]" />
+
+          <div className="max-w-7xl mx-auto px-6 relative z-10 pt-32 pb-20">
+
+            <div className="max-w-5xl">
+
+              <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 rounded-full text-sm text-zinc-300 mb-8 backdrop-blur-xl">
+                <div className="w-2 h-2 rounded-full bg-green-400" />
+                Plataforma financiera moderna
+              </div>
+
+              <h1 className="text-6xl md:text-8xl font-black leading-[0.92] tracking-tight">
+
+                La nueva generación
+                <span className="block text-blue-500">
+                  de educación financiera.
+                </span>
+
+              </h1>
+
+              <p className="text-zinc-400 text-xl md:text-2xl mt-10 max-w-3xl leading-relaxed">
+                Aprende inversión, economía y mercados
+                desde una plataforma diseñada para el futuro.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5 mt-12">
+
+                <Link
+                  href="/register"
+                  className="bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition"
+                >
+                  Empezar gratis
+                </Link>
+
+                <Link
+                  href="/comunidad"
+                  className="border border-white/10 bg-white/5 backdrop-blur-xl px-8 py-4 rounded-2xl text-lg hover:bg-white/10 transition"
+                >
+                  Explorar comunidad
+                </Link>
+
+              </div>
+
             </div>
-
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] tracking-tight">
-              El futuro de la educación financiera.
-            </h1>
-
-            <p className="text-zinc-400 text-xl mt-8 max-w-2xl leading-relaxed">
-              Aprende inversión, mercados y economía
-              desde una plataforma moderna diseñada
-              para la nueva generación.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-10">
-
-              <button className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-zinc-200 transition shadow-[0_0_40px_rgba(255,255,255,0.15)]">
-  Empezar ahora
-</button>
-
-              <button className="border border-white/10 text-white px-8 py-4 rounded-2xl hover:bg-white/5 transition">
-                Ver comunidad
-              </button>
-
-            </div>
-            <div className="flex flex-wrap gap-10 mt-16">
-
-  <div>
-    <p className="text-4xl font-bold text-white">
-      +12K
-    </p>
-
-    <p className="text-zinc-500 mt-1">
-      Usuarios
-    </p>
-  </div>
-
-  <div>
-    <p className="text-4xl font-bold text-white">
-      +2M€
-    </p>
-
-    <p className="text-zinc-500 mt-1">
-      Capital analizado
-    </p>
-  </div>
-
-  <div>
-    <p className="text-4xl font-bold text-white">
-      +350
-    </p>
-
-    <p className="text-zinc-500 mt-1">
-      Contenidos
-    </p>
-  </div>
-
-</div>
 
           </div>
 
         </section>
 
-        <section className="max-w-7xl mx-auto px-6 mt-40 pb-40">
+        {/* STATS */}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="border-t border-white/10 border-b border-white/10 bg-white/[0.02]">
 
-            <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 backdrop-blur-2xl hover:border-white/20 transition duration-300">
-              <h3 className="text-white text-2xl font-bold mb-4">
-                Comunidad
-              </h3>
+          <div className="max-w-7xl mx-auto px-6 py-16">
 
-              <p className="text-zinc-400">
-                Conecta con inversores y aprende diariamente.
-              </p>
-            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
 
-            <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 backdrop-blur-2xl hover:border-white/20 transition duration-300">
-              <h3 className="text-white text-2xl font-bold mb-4">
-                Educación
-              </h3>
+              <div>
+                <p className="text-5xl font-black">
+                  +12K
+                </p>
 
-              <p className="text-zinc-400">
-                Formación moderna sobre mercados y economía.
-              </p>
-            </div>
+                <p className="text-zinc-500 mt-2">
+                  Usuarios activos
+                </p>
+              </div>
 
-            <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 backdrop-blur-2xl hover:border-white/20 transition duration-300">
-              <h3 className="text-white text-2xl font-bold mb-4">
-                Tecnología
-              </h3>
+              <div>
+                <p className="text-5xl font-black">
+                  +320
+                </p>
 
-              <p className="text-zinc-400">
-                Plataforma rápida, segura y escalable.
-              </p>
+                <p className="text-zinc-500 mt-2">
+                  Análisis publicados
+                </p>
+              </div>
+
+              <div>
+                <p className="text-5xl font-black">
+                  +1M€
+                </p>
+
+                <p className="text-zinc-500 mt-2">
+                  Capital analizado
+                </p>
+              </div>
+
+              <div>
+                <p className="text-5xl font-black">
+                  24/7
+                </p>
+
+                <p className="text-zinc-500 mt-2">
+                  Comunidad activa
+                </p>
+              </div>
+
             </div>
 
           </div>
 
         </section>
-        <section className="max-w-7xl mx-auto px-6 py-32">
 
-  <div className="text-center mb-20">
+        {/* FEATURES */}
 
-    <p className="text-zinc-500 uppercase tracking-[0.3em] text-sm mb-4">
-      Plataforma moderna
-    </p>
+        <section className="py-32">
 
-    <h2 className="text-5xl md:text-6xl font-bold text-white max-w-4xl mx-auto leading-tight">
-      Diseñada para la nueva generación de inversores.
-    </h2>
+          <div className="max-w-7xl mx-auto px-6">
 
-  </div>
+            <div className="max-w-3xl mb-20">
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <p className="uppercase tracking-[0.3em] text-sm text-zinc-500 mb-6">
+                Plataforma
+              </p>
 
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-10">
-      <div className="text-5xl mb-6">
-        📈
-      </div>
+              <h2 className="text-5xl md:text-6xl font-black leading-tight">
+                Todo lo necesario para evolucionar como inversor.
+              </h2>
 
-      <h3 className="text-white text-2xl font-bold mb-4">
-        Análisis profesional
-      </h3>
+            </div>
 
-      <p className="text-zinc-400 leading-relaxed">
-        Accede a análisis modernos sobre acciones,
-        economía y tendencias financieras globales.
-      </p>
-    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-10">
-      <div className="text-5xl mb-6">
-        🌍
-      </div>
+              <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8">
 
-      <h3 className="text-white text-2xl font-bold mb-4">
-        Comunidad global
-      </h3>
+                <div className="text-5xl mb-8">
+                  📈
+                </div>
 
-      <p className="text-zinc-400 leading-relaxed">
-        Conecta con miles de personas interesadas
-        en inversión y crecimiento financiero.
-      </p>
-    </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  Mercados
+                </h3>
 
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-10">
-      <div className="text-5xl mb-6">
-        ⚡
-      </div>
+                <p className="text-zinc-400 leading-relaxed">
+                  Análisis de acciones, índices,
+                  criptomonedas y macroeconomía.
+                </p>
 
-      <h3 className="text-white text-2xl font-bold mb-4">
-        Tecnología moderna
-      </h3>
+              </div>
 
-      <p className="text-zinc-400 leading-relaxed">
-        Plataforma rápida, segura y optimizada
-        para la experiencia del usuario.
-      </p>
-    </div>
+              <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8">
 
-  </div>
+                <div className="text-5xl mb-8">
+                  🧠
+                </div>
 
-</section>
-<section className="max-w-7xl mx-auto px-6 py-32">
+                <h3 className="text-2xl font-bold mb-4">
+                  Formación
+                </h3>
 
-  <div className="text-center mb-20">
+                <p className="text-zinc-400 leading-relaxed">
+                  Aprende inversión desde cero
+                  con contenido premium actualizado.
+                </p>
 
-    <p className="text-zinc-500 uppercase tracking-[0.3em] text-sm mb-4">
-      Pricing
-    </p>
+              </div>
 
-    <h2 className="text-5xl md:text-6xl font-bold text-white">
-      Elige tu plan.
-    </h2>
+              <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8">
 
-  </div>
+                <div className="text-5xl mb-8">
+                  🚀
+                </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <h3 className="text-2xl font-bold mb-4">
+                  Comunidad
+                </h3>
 
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-10">
+                <p className="text-zinc-400 leading-relaxed">
+                  Comparte estrategias e ideas
+                  con miles de inversores modernos.
+                </p>
 
-      <h3 className="text-white text-3xl font-bold mb-4">
-        Free
-      </h3>
+              </div>
 
-      <p className="text-zinc-400 mb-8">
-        Acceso básico a la plataforma.
-      </p>
+            </div>
 
-      <p className="text-5xl font-bold text-white mb-10">
-        0€
-      </p>
+          </div>
 
-      <ul className="space-y-4 text-zinc-300 mb-10">
-        <li>✓ Comunidad básica</li>
-        <li>✓ Noticias</li>
-        <li>✓ Dashboard</li>
-      </ul>
-
-      <button className="w-full border border-white/10 py-4 rounded-2xl text-white hover:bg-white/5 transition">
-        Empezar gratis
-      </button>
-
-    </div>
-
-    <div className="bg-gradient-to-b from-blue-600/20 to-purple-600/20 border border-blue-500/20 rounded-3xl p-10 relative overflow-hidden">
-
-      <div className="absolute top-4 right-4 bg-white text-black px-3 py-1 rounded-full text-sm font-semibold">
-        Popular
-      </div>
-
-      <h3 className="text-white text-3xl font-bold mb-4">
-        Premium
-      </h3>
-
-      <p className="text-zinc-300 mb-8">
-        Para inversores que quieren ir más lejos.
-      </p>
-
-      <p className="text-5xl font-bold text-white mb-10">
-        19€
-        <span className="text-zinc-400 text-lg">
-          /mes
-        </span>
-      </p>
-
-      <ul className="space-y-4 text-zinc-200 mb-10">
-        <li>✓ Comunidad premium</li>
-        <li>✓ Análisis exclusivos</li>
-        <li>✓ Contenido avanzado</li>
-        <li>✓ Alertas y notificaciones</li>
-      </ul>
-
-      <button className="w-full bg-white text-black py-4 rounded-2xl font-semibold hover:bg-zinc-200 transition">
-        Probar Premium
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-<section className="max-w-5xl mx-auto px-6 py-32">
-
-  <div className="text-center mb-20">
-
-    <h2 className="text-5xl font-bold text-white">
-      Preguntas frecuentes
-    </h2>
-
-  </div>
-
-  <div className="space-y-6">
-
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8">
-      <h3 className="text-white text-2xl font-semibold mb-4">
-        ¿Qué es TestoCapital?
-      </h3>
-
-      <p className="text-zinc-400 leading-relaxed">
-        Plataforma moderna de inversión, análisis financiero
-        y comunidad para personas interesadas en economía.
-      </p>
-    </div>
-
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8">
-      <h3 className="text-white text-2xl font-semibold mb-4">
-        ¿Puedo usar la plataforma gratis?
-      </h3>
-
-      <p className="text-zinc-400 leading-relaxed">
-        Sí, existe un plan gratuito con acceso básico.
-      </p>
-    </div>
-
-    <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8">
-      <h3 className="text-white text-2xl font-semibold mb-4">
-        ¿Habrá aplicación móvil?
-      </h3>
-
-      <p className="text-zinc-400 leading-relaxed">
-        Sí. Próximamente disponible para iOS y Android.
-      </p>
-    </div>
-
-  </div>
-
-</section>
+        </section>
 
       </main>
 
