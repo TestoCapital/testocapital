@@ -12,49 +12,23 @@ export default function Navbar() {
     router.push("/login");
   }
 
-return (
-  <>
-    <Navbar />
-
-    <main className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-4xl font-bold">
-        Dashboard TestoCapital
-      </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-
-        <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-          <h2 className="text-zinc-400 mb-2">
-            Usuarios
-          </h2>
-
-          <p className="text-3xl font-bold">
-            124
-          </p>
+  return (
+    <header className="w-full border-b border-zinc-800 bg-black">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        <div>
+          <h1 className="text-white text-2xl font-bold">
+            TestoCapital
+          </h1>
         </div>
 
-        <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-          <h2 className="text-zinc-400 mb-2">
-            Suscriptores
-          </h2>
-
-          <p className="text-3xl font-bold">
-            32
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-          <h2 className="text-zinc-400 mb-2">
-            Ingresos
-          </h2>
-
-          <p className="text-3xl font-bold">
-            €12.450
-          </p>
-        </div>
-
+        <button
+          onClick={handleLogout}
+          className="bg-zinc-800 hover:bg-zinc-700 transition text-white px-4 py-2 rounded-xl"
+        >
+          Cerrar sesión
+        </button>
       </div>
-    </main>
-  </>
-);
-}import Navbar from "../components/Navbar";
+    </header>
+  );
+}
